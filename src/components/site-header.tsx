@@ -23,8 +23,8 @@ export function SiteHeader() {
         </nav>
         <div className="header-actions">
           <ThemeToggle />
-          <Link className="button button-small button-primary header-cta" href={siteConfig.repositories.product} target="_blank" rel="noreferrer">
-            Explore project <ArrowUpRight size={15} />
+          <Link className="button button-small button-primary header-cta" href={siteConfig.repositories.website} target="_blank" rel="noreferrer">
+            View source <ArrowUpRight size={15} />
           </Link>
           <button className="mobile-menu-button" type="button" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>
             {open ? <X size={21} /> : <Menu size={21} />}
