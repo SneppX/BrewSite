@@ -23,9 +23,9 @@ export default function HomePage() {
       <section className="hero-section">
         <div className="hero-grid container">
           <div className="hero-copy">
-            <div className="eyebrow">A local-first automation project</div>
-            <h1>Useful automation.<br /><span className="gradient-text">Clear permission.</span></h1>
-            <p className="hero-description">BrewPilot is being built around a simple boundary: an assistant can request an action, but the local machine decides whether that action is allowed.</p>
+            <div className="eyebrow">A local-first tool for deliberate work</div>
+            <h1>Automation that stays<br /><span className="gradient-text">under your control.</span></h1>
+            <p className="hero-description">BrewPilot connects assistant-driven workflows to your own machine without handing over the keys. Every local operation is checked against permissions on that machine.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/docs">Read the documentation <ArrowRight size={17} /></Link>
               <Link className="button button-quiet" href={siteConfig.repositories.local} target="_blank" rel="noreferrer">Explore the source <ArrowUpRight size={16} /></Link>
@@ -64,8 +64,8 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading">
             <div className="eyebrow">What exists today</div>
-            <h2>Built in layers.<br /><span className="muted-heading">Verified in the open.</span></h2>
-            <p>These are repository-level implementation details, not promises that every component is already packaged in a public release.</p>
+            <h2>What works now.<br /><span className="muted-heading">What is still being built.</span></h2>
+            <p>The status labels refer to code in the public repositories. They do not imply that a finished installer or hosted service is available.</p>
           </div>
           <MotionReveal><div className="feature-grid">{capabilities.map(({ icon: Icon, number, title, description, status }) => (
             <article className="feature-card" key={title}>
@@ -81,7 +81,7 @@ export default function HomePage() {
         <div className="container security-layout">
           <div className="security-copy">
             <div className="eyebrow">The security boundary</div>
-            <h2>The assistant asks.<br /><span className="gradient-text">Your machine decides.</span></h2>
+            <h2>Your machine keeps<br /><span className="gradient-text">the final say.</span></h2>
             <p>Cloud-side approval is never enough. The local permission manager checks the requested capability, operation, and resource before dispatch. Destructive and consequential external actions require fresh, request-bound confirmation. Privileged operating-system actions remain unavailable until a separate authorization adapter exists.</p>
             <Link className="text-link" href="/docs/security">Read the security model <ArrowUpRight size={15} /></Link>
           </div>
@@ -101,7 +101,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading centered">
             <div className="eyebrow">Platform work</div>
-            <h2>One codebase.<br /><span className="muted-heading">Three test environments.</span></h2>
+            <h2>Tested across<br /><span className="muted-heading">three operating systems.</span></h2>
             <p>Automated checks run on Windows, macOS, and Linux. That is CI coverage, not a claim that every native operating-system adapter is finished.</p>
           </div>
           <div className="platform-grid">
@@ -114,8 +114,8 @@ export default function HomePage() {
 
       <section className="cta-section"><div className="container cta-inner">
         <div className="eyebrow">Follow the engineering work</div>
-        <h2>Read the code.<br /><span className="gradient-text">Check the claims.</span></h2>
-        <p>The cloud relay, device pairing, native system adapters, and public installers are still under development. Follow the repositories for implementation updates.</p>
+        <h2>Follow the work.<br /><span className="gradient-text">Inspect every claim.</span></h2>
+        <p>The hosted relay, device pairing, native system adapters, and public installers are not ready yet. Their status will change here when the code and release artifacts are ready.</p>
         <div className="hero-actions">
           <Link className="button button-primary" href="/docs">Read the docs <ArrowRight size={16} /></Link>
           <Link className="button button-quiet" href={siteConfig.repositories.issues} target="_blank" rel="noreferrer">Report an issue <ArrowUpRight size={15} /></Link>
