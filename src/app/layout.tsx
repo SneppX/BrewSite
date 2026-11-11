@@ -5,30 +5,33 @@ import { SiteFooter } from "@/components/site-footer";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
+const pageTitle = "BrewPilot | Local-first automation with explicit permission";
+const pageDescription = siteConfig.description;
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "BrewPilot — Automation, under your control",
+    default: pageTitle,
     template: "%s | BrewPilot",
   },
-  description: siteConfig.description,
+  description: pageDescription,
   applicationName: "BrewPilot",
   openGraph: {
     type: "website",
     siteName: "BrewPilot",
-    title: "BrewPilot — Automation, under your control",
-    description: siteConfig.description,
+    title: pageTitle,
+    description: pageDescription,
   },
   twitter: {
-    card: "summary_large_image",
-    title: "BrewPilot — Automation, under your control",
-    description: siteConfig.description,
+    card: "summary",
+    title: pageTitle,
+    description: pageDescription,
   },
   robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
-  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#08090d" }, { media: "(prefers-color-scheme: light)", color: "#f6f7fb" }],
+  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#111512" }, { media: "(prefers-color-scheme: light)", color: "#f3f1e9" }],
   colorScheme: "dark light",
 };
 
