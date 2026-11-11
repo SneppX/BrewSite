@@ -26,4 +26,3 @@ BrewSite is being developed as a frontend-first product website. The initial rel
 ## Repository
 
 - Website: https://github.com/SneppX/BrewSite
-- Product: https://github.com/SneppX/BrewPilot
