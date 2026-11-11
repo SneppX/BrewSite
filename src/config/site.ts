@@ -16,6 +16,7 @@ export const siteConfig = {
     { label: "Security", href: "/#security" },
     { label: "Platforms", href: "/#platforms" },
     { label: "Documentation", href: "/docs" },
+    { label: "Roadmap", href: "/roadmap" },
     { label: "Changelog", href: "/changelog" },
   ],
 } as const;
