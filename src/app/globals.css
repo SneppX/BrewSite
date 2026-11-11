@@ -123,3 +123,11 @@ h1,h2,h3,p { margin-top: 0; }
 .download-footnote { display: flex; align-items: center; gap: 9px; margin-top: 24px; color: var(--muted); font-size: 11px; }.download-footnote svg { color: var(--accent-2); flex: 0 0 auto; }
 .not-found { padding-block: 90px 120px; }
 @media (max-width:760px) { .subpage-section { padding: 76px 0 90px; }.subpage-title { letter-spacing: -2px; }.doc-card-grid { grid-template-columns: 1fr; margin-top: 36px; }.doc-card { min-height: 190px; }.article-layout { padding-top: 72px; padding-bottom: 90px; }.download-status { grid-template-columns: 1fr; padding: 24px; }.timeline-entry { grid-template-columns: 34px 1fr; gap: 14px; } }
+
+
+.hero-scene { position: absolute; inset: -8%; z-index: 0; pointer-events: none; opacity: .52; }
+.hero-copy { position: relative; z-index: 1; }
+.terminal-card { position: relative; z-index: 1; }
+.floating-chip { z-index: 2; }
+.security-panel { position: relative; }
+.security-panel-inner { display: contents; }
