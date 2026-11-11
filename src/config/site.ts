@@ -4,10 +4,11 @@ export const siteConfig = {
   company: "SneppX",
   description:
     "A permission-first automation workspace for browser workflows and carefully authorized local computer operations.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://brewsite-two.vercel.app",
   repositories: {
     website: "https://github.com/SneppX/BrewSite",
     issues: "https://github.com/SneppX/BrewSite/issues",
+    releases: "https://github.com/SneppX/BrewLocal/releases",
   },
   navigation: [
     { label: "Features", href: "/#features" },
