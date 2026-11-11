@@ -1,28 +1,37 @@
 # BrewSite
 
-The official website for BrewPilot by SneppX.
+The official BrewPilot website by SneppX.
 
-## Project status
+## Live website
 
-BrewSite is being developed as a frontend-first product website. The initial release will not include user accounts, authentication, a backend service, or payment processing.
+- Production: https://brewsite-two.vercel.app
+- Documentation: https://brewsite-two.vercel.app/docs
+- Architecture: https://brewsite-two.vercel.app/docs/architecture
+- Downloads: https://brewsite-two.vercel.app/downloads
+- GitHub Issues: https://github.com/SneppX/BrewSite/issues
 
-## Planned sections
+## Project scope
 
-- Product overview and feature highlights
-- Platform support and downloads
-- Documentation and getting-started guides
-- Release notes and changelog
-- GitHub-powered bug reports and feature requests
-- Responsive layouts with light and dark themes
+BrewSite is a frontend-first product website. It currently has no user accounts, authentication, payment processing, or application backend. Bug reports and feature requests use GitHub Issues.
 
-## Development principles
+## Release availability
 
-- Accessible, responsive interfaces
-- Strong TypeScript types and maintainable component boundaries
-- Motion that supports the experience rather than obscuring content
-- No secrets or privileged credentials in browser code
-- GitHub Issues as the initial public feedback channel
+No public BrewPilot installers or GitHub Releases have been published yet. The Downloads page links to the official BrewLocal release channel; do not treat development commits as installable releases. Publish signed platform artifacts and checksums before marking a platform as downloadable.
 
-## Repository
+## Quality gates
 
-- Website: https://github.com/SneppX/BrewSite
+- TypeScript type-check
+- ESLint
+- Production Next.js build
+- npm audit at high severity or above
+
+## Development
+
+Requires Node.js 22 or newer.
+
+```bash
+npm install
+npm run typecheck
+npm run lint
+npm run build
+```
