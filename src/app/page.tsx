@@ -26,7 +26,7 @@ export default function HomePage() {
             <p className="hero-description">BrewPilot brings browser workflows and authorized computer operations into one assistant-ready workspace. You decide what it can do.</p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/docs">Explore documentation <ArrowRight size={17} /></Link>
-              <Link className="button button-quiet" href={siteConfig.repositories.product} target="_blank" rel="noreferrer">View on GitHub <ArrowUpRight size={16} /></Link>
+              <Link className="button button-quiet" href={siteConfig.repositories.website} target="_blank" rel="noreferrer">View on GitHub <ArrowUpRight size={16} /></Link>
             </div>
             <div className="hero-proof"><span><Check size={14} /> Permission-first design</span><span><Check size={14} /> Windows · macOS · Linux</span></div>
           </MotionReveal>
