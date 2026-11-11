@@ -1,54 +1,56 @@
 import type { Metadata } from "next";
 import { CheckCircle2, CircleDashed, Clock3 } from "lucide-react";
 
-export const metadata: Metadata = { title: "Roadmap", description: "BrewPilot development milestones and planned capabilities." };
+export const metadata: Metadata = { title: "Roadmap", description: "BrewPilot engineering milestones, current implementation, and planned work." };
 
 const milestones = [
   {
-    title: "Local browser automation",
+    title: "Existing local plugin",
     status: "complete",
-    label: "Existing local release",
-    items: ["Chromium-based browser sessions", "Isolated persistent browser profiles", "Permission-gated browser operations", "Basic system information"],
+    label: "Published privately",
+    items: ["Chromium-based browser automation", "Isolated browser profiles", "Permission-gated browser operations", "Basic system information"],
   },
   {
-    title: "Secure cloud and bridge foundation",
+    title: "Local agent source",
     status: "progress",
-    label: "In progress",
-    items: ["Signed request envelope and replay protection", "Request-bound local permission approvals", "Strict assistant-facing tool contracts", "Local bridge dispatch boundary and redacted audit foundation"],
+    label: "Source implementation",
+    items: ["Bounded local file list and read operations", "Permission-gated text file creation, overwrite, and deletion", "Symlink rejection and atomic overwrite path", "Cross-platform CI checks for Windows, macOS, and Linux"],
   },
   {
-    title: "Cross-platform system capabilities",
-    status: "planned",
-    label: "Planned",
-    items: ["Windows native adapter", "macOS native adapter with TCC compliance", "Linux desktop and Wayland-aware adapter", "Window, file, and process management"],
+    title: "Cloud protocol and pairing foundation",
+    status: "progress",
+    label: "Core in source · integration pending",
+    items: ["Signed request envelope and local verification", "Deny-by-default cloud policy engine", "Single-use Ed25519 pairing core with hashed five-minute codes", "Persistent database adapter and durable request store still required"],
   },
   {
-    title: "Cloud integration and device management",
+    title: "Cloud relay and ChatGPT integration",
     status: "planned",
-    label: "Planned",
-    items: ["ChatGPT Sites MCP hosting adapter", "Secure device pairing and revocation", "Authenticated outbound device relay", "Request cancellation and connection controls"],
+    label: "Not deployed",
+    items: ["Authenticated outbound connection from the local agent", "Durable request queue and cancellation propagation", "Official ChatGPT Sites MCP hosting adapter", "Device presence, revocation, and end-to-end integration tests"],
   },
   {
-    title: "Release and ecosystem",
+    title: "Native operating-system capabilities",
     status: "planned",
-    label: "Planned",
-    items: ["Verified platform installers and checksums", "Public release notes and update guidance", "Expanded documentation and integration tests", "Security review before broader availability"],
+    label: "Not shipped",
+    items: ["Windows native adapter", "macOS native adapter with TCC compliance", "Linux desktop and Wayland-aware adapter", "Window, process, and additional file-management operations"],
+  },
+  {
+    title: "Verified public releases",
+    status: "planned",
+    label: "Release work pending",
+    items: ["Signed platform installers and checksums", "Update and rollback guidance", "Independent security review", "Public release notes and support process"],
   },
 ];
 
-const statusIcon = {
-  complete: CheckCircle2,
-  progress: Clock3,
-  planned: CircleDashed,
-};
+const statusIcon = { complete: CheckCircle2, progress: Clock3, planned: CircleDashed };
 
 export default function RoadmapPage() {
   return (
     <section className="subpage-section">
       <div className="container subpage-container">
-        <div className="eyebrow">THE BUILD PLAN</div>
+        <div className="eyebrow">Engineering plan</div>
         <h1 className="subpage-title">Roadmap<span className="gradient-text">.</span></h1>
-        <p className="subpage-lead">A living view of what exists, what is being built, and what is still planned. A roadmap item is not a shipped feature.</p>
+        <p className="subpage-lead">A working record of what is shipped, what exists in source, and what still needs to be built. Source code is not the same as a packaged release.</p>
         <div className="roadmap-list">
           {milestones.map((milestone, index) => {
             const Icon = statusIcon[milestone.status as keyof typeof statusIcon];
