@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, Command, Fingerprint, Laptop, LockKeyhole, ShieldCheck, Sparkles, Terminal, Workflow } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { HeroScene } from "@/components/hero-scene";
+import { MotionReveal } from "@/components/motion-reveal";
 
 const features = [
   { icon: Workflow, title: "Browser workflows", description: "Navigate, inspect, interact with, and automate supported browser sessions through deliberate, permission-aware actions." },
@@ -18,7 +20,7 @@ export default function HomePage() {
     <>
       <section className="hero-section">
         <div className="hero-grid container">
-          <div className="hero-copy">
+          <MotionReveal className="hero-copy">
             <div className="eyebrow"><span className="status-dot" /> A new standard for controlled automation</div>
             <h1>Automation.<br /><span className="gradient-text">Under your control.</span></h1>
             <p className="hero-description">BrewPilot brings browser workflows and authorized computer operations into one assistant-ready workspace. You decide what it can do.</p>
@@ -27,8 +29,9 @@ export default function HomePage() {
               <Link className="button button-quiet" href={siteConfig.repositories.product} target="_blank" rel="noreferrer">View on GitHub <ArrowUpRight size={16} /></Link>
             </div>
             <div className="hero-proof"><span><Check size={14} /> Permission-first design</span><span><Check size={14} /> Windows · macOS · Linux</span></div>
-          </div>
+          </MotionReveal>
           <div className="hero-visual" aria-label="Abstract BrewPilot automation interface illustration">
+            <HeroScene />
             <div className="visual-orbit orbit-one" /><div className="visual-orbit orbit-two" />
             <div className="visual-glow" />
             <div className="terminal-card">
@@ -53,14 +56,14 @@ export default function HomePage() {
       <section className="section section-features" id="features">
         <div className="container">
           <div className="section-heading"><div className="eyebrow">CAPABILITIES</div><h2>Powerful workflows.<br /><span className="muted-heading">Clear boundaries.</span></h2><p>One product direction, three clear priorities: useful automation, explicit control, and a trustworthy local execution boundary.</p></div>
-          <div className="feature-grid">{features.map(({ icon: Icon, title, description }, index) => <article className="feature-card" key={title}><div className="feature-icon"><Icon size={20} strokeWidth={1.7} /></div><span className="feature-index">0{index + 1}</span><h3>{title}</h3><p>{description}</p><span className="feature-line" /></article>)}</div>
+          <MotionReveal><div className="feature-grid">{features.map(({ icon: Icon, title, description }, index) => <article className="feature-card" key={title}><div className="feature-icon"><Icon size={20} strokeWidth={1.7} /></div><span className="feature-index">0{index + 1}</span><h3>{title}</h3><p>{description}</p><span className="feature-line" /></article>)}</div></MotionReveal>
         </div>
       </section>
 
       <section className="section security-section" id="security">
         <div className="container security-layout">
           <div className="security-copy"><div className="eyebrow">CONTROL IS THE FEATURE</div><h2>Nothing happens<br />without <span className="gradient-text">a boundary.</span></h2><p>BrewPilot is being designed around a simple rule: an assistant should never receive more authority than the task requires. Local operations remain behind a separate, user-controlled bridge.</p><Link className="text-link" href="/docs/security">Read the security model <ArrowUpRight size={15} /></Link></div>
-          <div className="security-panel"><div className="panel-header"><ShieldCheck size={18} /><span>Permission policy</span><span className="panel-indicator">ENFORCED</span></div><div className="policy-row"><span className="policy-symbol">01</span><div><strong>Unmatched request</strong><small>No explicit policy found</small></div><span className="policy-state state-deny">DENY</span></div><div className="policy-row"><span className="policy-symbol">02</span><div><strong>Scoped operation</strong><small>Exact capability and resource</small></div><span className="policy-state state-ask">ASK</span></div><div className="policy-row"><span className="policy-symbol">03</span><div><strong>Destructive action</strong><small>Fresh confirmation required</small></div><span className="policy-state state-ask">CONFIRM</span></div><div className="panel-foot"><span className="status-dot" /> User authority remains local</div></div>
+          <MotionReveal className="security-panel"><div className="security-panel-inner"><div className="panel-header"><ShieldCheck size={18} /><span>Permission policy</span><span className="panel-indicator">ENFORCED</span></div><div className="policy-row"><span className="policy-symbol">01</span><div><strong>Unmatched request</strong><small>No explicit policy found</small></div><span className="policy-state state-deny">DENY</span></div><div className="policy-row"><span className="policy-symbol">02</span><div><strong>Scoped operation</strong><small>Exact capability and resource</small></div><span className="policy-state state-ask">ASK</span></div><div className="policy-row"><span className="policy-symbol">03</span><div><strong>Destructive action</strong><small>Fresh confirmation required</small></div><span className="policy-state state-ask">CONFIRM</span></div><div className="panel-foot"><span className="status-dot" /> User authority remains local</div></div>
         </div>
       </section>
 
