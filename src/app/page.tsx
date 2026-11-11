@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, Command, Fingerprint, Laptop, LockKeyhole, ShieldCheck, Sparkles, Terminal, Workflow } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { HeroScene } from "@/components/hero-scene";
+import { HeroSceneLoader } from "@/components/hero-scene-loader";
 import { MotionReveal } from "@/components/motion-reveal";
 
 const features = [
@@ -31,7 +31,7 @@ export default function HomePage() {
             <div className="hero-proof"><span><Check size={14} /> Permission-first design</span><span><Check size={14} /> Windows · macOS · Linux</span></div>
           </MotionReveal>
           <div className="hero-visual" aria-label="Abstract BrewPilot automation interface illustration">
-            <HeroScene />
+            <HeroSceneLoader />
             <div className="visual-orbit orbit-one" /><div className="visual-orbit orbit-two" />
             <div className="visual-glow" />
             <div className="terminal-card">
