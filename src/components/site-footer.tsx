@@ -15,7 +15,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-links">
           <div><span className="footer-label">Explore</span><Link href="/docs">Documentation</Link><Link href="/changelog">Changelog</Link><Link href="/downloads">Downloads</Link></div>
-          <div><span className="footer-label">Community</span><Link href={siteConfig.repositories.issues} target="_blank" rel="noreferrer">Report an issue</Link><Link href={siteConfig.repositories.issues + "/new?template=feature_request.yml"} target="_blank" rel="noreferrer">Request a feature</Link><Link href={siteConfig.repositories.website} target="_blank" rel="noreferrer">Website source</Link></div>
+          <div><span className="footer-label">Community</span><Link href="/report-bug">Report a bug</Link><Link href="/request-feature">Request a feature</Link><Link href={siteConfig.repositories.issues + "/new?template=feature_request.yml"} target="_blank" rel="noreferrer">Request a feature</Link><Link href={siteConfig.repositories.website} target="_blank" rel="noreferrer">Website source</Link></div>
         </div>
       </div>
       <div className="container footer-bottom">
