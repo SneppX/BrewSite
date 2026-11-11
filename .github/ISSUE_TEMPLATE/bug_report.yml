@@ -1,0 +1,47 @@
+name: Bug report
+description: Report a reproducible problem in BrewPilot or BrewSite.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include passwords, tokens, cookies, private keys, or personal data."
+  - type: input
+    id: version
+    attributes:
+      label: Product version
+      placeholder: "e.g. local plugin 0.2.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - ChatGPT web
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Include the expected and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Redact secrets and sensitive information before posting.
+    validations:
+      required: false

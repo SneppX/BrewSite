@@ -1,0 +1,7 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Permissions" };
+
+export default function PermissionsPage() {
+  return <article className="container article-layout"><div className="eyebrow">DOCUMENTATION / PERMISSIONS</div><h1 className="article-title">Permissions</h1><p className="article-lead">Permission decisions are scoped to a capability, operation, and resource. Broad grants should be avoided.</p><div className="table-wrap"><table className="data-table"><thead><tr><th>Mode</th><th>Behavior</th><th>Typical use</th></tr></thead><tbody><tr><td>deny</td><td>Always blocks the matching request.</td><td>Untrusted or unwanted operations.</td></tr><tr><td>ask</td><td>Requires explicit approval for each request.</td><td>Default for new capabilities.</td></tr><tr><td>session</td><td>Allows an exact scoped request during the active session after approval.</td><td>Repeated low-risk task steps.</td></tr><tr><td>always</td><td>Allows the exact configured scope persistently, except actions that always require fresh confirmation.</td><td>Trusted, low-risk repetitive operations.</td></tr></tbody></table></div><h2>High-risk operations</h2><p>Destructive operations, operating-system elevation, external submissions, purchases, payments, and irreversible actions require fresh confirmation. A persistent policy must never silently authorize these actions.</p><h2>Policy changes</h2><p>Permission changes should be visible, auditable, and reversible. Resetting policy must return the system to deny-by-default behavior.</p></article>;
+}
