@@ -36,7 +36,7 @@ export function SiteHeader() {
           {siteConfig.navigation.map((item) => (
             <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
           ))}
-          <Link href={siteConfig.repositories.product} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Explore project <ArrowUpRight size={15} /></Link>
+          <Link href={siteConfig.repositories.website} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>Explore project <ArrowUpRight size={15} /></Link>
         </nav>
       )}
     </header>
