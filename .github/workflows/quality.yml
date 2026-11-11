@@ -25,6 +25,10 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
+      - name: Summarize dependency advisories
+        run: |
+          npm audit --json > npm-audit.json || true
+          node -e 'const a=require("./npm-audit.json"); Object.entries(a.vulnerabilities||{}).forEach(([n,v])=>console.log(n+" | "+v.severity+" | fix="+JSON.stringify(v.fixAvailable)))'
       - name: Type-check
         run: npm run typecheck
       - name: Lint
