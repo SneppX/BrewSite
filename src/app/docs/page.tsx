@@ -9,6 +9,7 @@ const sections = [
   { icon: ShieldCheck, title: "Security model", description: "Learn how permission policies, approval boundaries, and local execution fit together.", href: "/docs/security" },
   { icon: Monitor, title: "Platform support", description: "See the supported environments and the adapter roadmap.", href: "/#platforms" },
   { icon: LockKeyhole, title: "Permissions", description: "Understand deny-by-default behavior and exact-scope approvals.", href: "/docs/permissions" },
+  { icon: ShieldCheck, title: "Architecture", description: "See how ChatGPT, cloud requests, and local authorization fit together.", href: "/docs/architecture" },
 ];
 
 export default function DocsPage() {
