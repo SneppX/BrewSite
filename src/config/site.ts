@@ -7,9 +7,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   repositories: {
     website: "https://github.com/SneppX/BrewSite",
-    product: "https://github.com/SneppX/BrewPilot",
     issues: "https://github.com/SneppX/BrewSite/issues",
-    releases: "https://github.com/SneppX/BrewPilot/releases",
   },
   navigation: [
     { label: "Features", href: "/#features" },
