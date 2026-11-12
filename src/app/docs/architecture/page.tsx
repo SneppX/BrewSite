@@ -1,11 +1,8 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Cloud, Laptop, ShieldCheck } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Architecture",
-  description: "How BrewPilot separates assistant requests, cloud coordination, and local authorization.",
-};
+export const metadata = createPageMetadata({ title: "Architecture", description: "Explore BrewPilot's architecture: assistant-facing MCP tools, signed request boundaries, cloud coordination, and local authorization.", path: "/docs/architecture" });
 
 const layers = [
   {
