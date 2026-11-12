@@ -7,6 +7,27 @@ import "./globals.css";
 
 const pageTitle = "BrewPilot | Local-first automation with explicit permission";
 const pageDescription = siteConfig.description;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteConfig.url}/#organization`,
+      name: "SneppX",
+      url: siteConfig.url,
+      sameAs: [siteConfig.repositories.local, siteConfig.repositories.cloud, siteConfig.repositories.website],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteConfig.url}/#website`,
+      name: "BrewPilot",
+      url: siteConfig.url,
+      description: pageDescription,
+      publisher: { "@id": `${siteConfig.url}/#organization` },
+      inLanguage: "en",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -27,7 +48,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
   },
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
 };
 
 export const viewport: Viewport = {
