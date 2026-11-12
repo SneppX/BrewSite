@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Permissions" };
+export const metadata = createPageMetadata({ title: "Permissions", description: "Learn how BrewPilot scopes local automation permissions, handles destructive actions, and enforces least privilege.", path: "/docs/permissions" });
 
 export default function PermissionsPage() {
   return (
