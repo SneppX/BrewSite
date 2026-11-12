@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight, BookOpen, LockKeyhole, Monitor, ShieldCheck } from "lucide-react";
 
-export const metadata: Metadata = { title: "Documentation", description: "Guides and technical documentation for BrewPilot." };
+export const metadata = createPageMetadata({ title: "Documentation", description: "Technical documentation for BrewPilot, including setup, permissions, architecture, platform support, and the local-first security model.", path: "/docs" });
 
 const sections = [
   { icon: BookOpen, title: "Getting started", description: "Understand the product, its components, and the current development status.", href: "/docs/getting-started" },
