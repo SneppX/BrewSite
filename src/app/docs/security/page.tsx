@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = { title: "Security model" };
+export const metadata = createPageMetadata({ title: "Security model", description: "Understand BrewPilot's local-first security model, deny-by-default permissions, request verification, and current implementation boundaries.", path: "/docs/security" });
 
 export default function SecurityPage() {
   return (
