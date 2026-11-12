@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     description: pageDescription,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
   },
