@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     template: "%s | BrewPilot",
   },
   description: pageDescription,
+  alternates: { canonical: "/" },
   applicationName: "BrewPilot",
   openGraph: {
     type: "website",
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         <ThemeProvider>
           <div className="site-shell">
             <SiteHeader />
