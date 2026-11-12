@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowUpRight, GitCommitHorizontal } from "lucide-react";
 
-export const metadata: Metadata = { title: "Changelog", description: "Dated BrewPilot engineering updates and release notes." };
+export const metadata = createPageMetadata({ title: "Changelog", description: "Read dated BrewPilot engineering updates, source changes, release notes, and product development progress.", path: "/changelog" });
 
 export default function ChangelogPage() {
   return (
