@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
 import { CheckCircle2, CircleDashed, Clock3 } from "lucide-react";
 
-export const metadata: Metadata = { title: "Roadmap", description: "BrewPilot engineering milestones, current implementation, and planned work." };
+export const metadata = createPageMetadata({ title: "Roadmap", description: "Track BrewPilot engineering milestones, implemented source features, cloud integration work, and planned releases.", path: "/roadmap" });
 
 const milestones = [
   {
